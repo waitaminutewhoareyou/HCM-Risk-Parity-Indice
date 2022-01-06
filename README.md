@@ -31,7 +31,7 @@ Avg. Drawdown Duration         146 days 00:00:00
 Max. Underwater Duration       463 days 00:00:00
 Total Underwater Duration     2598 days 00:00:00
 ```
-![](result/img/monthly_rebalancing leverage.jpg)
+![alt text](https://github.com/waitaminutewhoareyou/HCM-Risk-Parity-Indice/blob/main/result/img/monthly_rebalancing%20leverage.jpg)
 
 ### Daily Rebalancing
 ```plaintext
@@ -50,9 +50,11 @@ Avg. Drawdown Duration         149 days 01:20:00
 Max. Underwater Duration       202 days 00:00:00
 Total Underwater Duration     2341 days 00:00:00
 ```
-![](result/img/daily_rebalancing leverage.jpg)
+![alt text](https://github.com/waitaminutewhoareyou/HCM-Risk-Parity-Indice/blob/main/result/img/daily_rebalancing%20leverage.jpg)
+
+
 ### Weekly Rebalancing
-![](result/img/weekly_rebalancing leverage.jpg)
+![alt text](https://github.com/waitaminutewhoareyou/HCM-Risk-Parity-Indice/blob/main/result/img/weekly_rebalancing%20leverage.jpg)
 #### Monday
 ```plaintext
 Start                        2011-12-26 00:00:00
