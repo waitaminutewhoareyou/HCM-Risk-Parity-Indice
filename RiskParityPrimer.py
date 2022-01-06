@@ -2,13 +2,7 @@ import numpy as np
 import pandas as pd
 import datetime as dt
 
-SP_pool = [32, 28, 42, 24, 51, 80,
-           39, 31, 19, 22,
-           36, 21, 40,
-           20, 27, 35,
-           12, 14, 15,
-           11, 4, 5, 9,
-           76, 57, 64]
+
 
 data_folder = '../data/'
 data_dir = '../data/consolidated_table_wo_features_SP'
@@ -32,7 +26,7 @@ class RiskParitySP:
         # load data
         self.df = pd.read_pickle(data_dir)
 
-        self.asset_specs = pd.read_csv(asset_spec_dir, index_col='Asset number').loc[SP_pool]
+        self.asset_specs = pd.read_csv(asset_spec_dir, index_col='Asset number')
         self.indicator = self.asset_specs[['Comm indicator', 'Equity indicator', 'Bond indicator']]
 
         self.commodity_class = (self.asset_specs['Comm indicator'] == 1).index
@@ -47,6 +41,8 @@ class RiskParitySP:
         self.N = minN
         self.ac_ret = pd.DataFrame()  # asset class return will be calculated and appended later
         self.TV = TV
+
+        self.leverage = pd.Series()
 
     def compute_weight(self, date, rebalancing_gap):
 
@@ -107,6 +103,7 @@ class RiskParitySP:
         p_rv = p_ret.apply(compute_volatility_by_column)
         pM = (self.TV / p_rv).values[0]
 
+        self.leverage = self.leverage.append(pd.Series(pM, index=[date]))
         # Calculate weight of each futures contract
         raw_w *= pM
 

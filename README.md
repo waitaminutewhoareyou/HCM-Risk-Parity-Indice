@@ -6,137 +6,139 @@ S&P Risk Parity Index.
 ![](result/img/comparison.jpg)
 
 # Correlation table
-|                        |   Replicated | S&P Risk Parity Index |   Equal Weighting |
-|:-----------------------|-------------:|----------------------:|------------------:|
-| Replicated             |         1    |                  0.99 |              0.87 |
-| S&P Risk Parity Index  |         0.99 |                     1 |              0.87 |
-| Equal Weighting        |         0.87 |                  0.87 |              1    |
-
-
+|                                 | HCM Risk Parity Index | S&P Risk Parity Index | Equal Weighting |
+|:--------------------------------|----------------------:|----------------------:|----------------:|
+| HCM Risk Parity Index           |                     1 |                  0.94 |            0.88 |
+| S&P Risk Parity Index           |                  0.94 |                     1 |            0.85 |
+| Equal Weighting                 |                  0.88 |                  0.85 |               1 |
+|                            
 # Performance Metrics
 ### Monthly Rebalancing
 
 ```plaintext
-Start                                2012-01-04 00:00:00
-End                                  2022-01-03 00:00:00
-Duration                              3652 days 00:00:00
-Return (Ann.) [%]                               6.060919
-Volatility (Ann.) [%]                           6.524049
-Information Ratio                               0.929012
-Final AUM [unitless]                            1.844498
-AUM Peak [$]                                    1.851624
-Final Return [%]                               84.449819
-Max. Drawdown [%]                             -10.847945
-Max. Drawdown Duration                 427 days 00:00:00
-Avg. Drawdown Duration       117 days 20:52:10.434782608
-Max. Underwater Duration               463 days 00:00:00
-Total Underwater Duration             2588 days 00:00:00
+Start                        2012-01-02 00:00:00
+End                          2022-01-03 00:00:00
+Duration                      3654 days 00:00:00
+Return (Ann.) [%]                      13.155015
+Volatility (Ann.) [%]                  12.505835
+Information Ratio                        1.05191
+Final AUM [unitless]                    3.635543
+AUM Peak [$]                            3.652543
+Final Return [%]                      263.554264
+Max. Drawdown [%]                      -21.75385
+Max. Drawdown Duration         488 days 00:00:00
+Avg. Drawdown Duration         143 days 21:20:00
+Max. Underwater Duration       464 days 00:00:00
+Total Underwater Duration     2603 days 00:00:00
 ```
+![](result/img/monthly_rebalancing leverage.jpg)
+
 ### Daily Rebalancing
 ```plaintext
-Start                                2012-01-04 00:00:00
-End                                  2022-01-03 00:00:00
-Duration                              3652 days 00:00:00
-Return (Ann.) [%]                              13.085124
-Volatility (Ann.) [%]                           13.71663
-Information Ratio                               0.953961
-Final AUM [unitless]                            3.594435
-AUM Peak [$]                                    3.622377
-Final Return [%]                              243.334415
-Max. Drawdown [%]                             -21.331295
-Max. Drawdown Duration                 427 days 00:00:00
-Avg. Drawdown Duration       119 days 05:13:02.608695652
-Max. Underwater Duration               463 days 00:00:00
-Total Underwater Duration             2590 days 00:00:00
+Start                        2011-12-26 00:00:00
+End                          2022-01-03 00:00:00
+Duration                      3661 days 00:00:00
+Return (Ann.) [%]                      13.286219
+Volatility (Ann.) [%]                  12.415014
+Information Ratio                       1.070173
+Final AUM [unitless]                    3.689003
+AUM Peak [$]                            3.706223
+Final Return [%]                      263.840078
+Max. Drawdown [%]                     -21.559265
+Max. Drawdown Duration         488 days 00:00:00
+Avg. Drawdown Duration         143 days 21:20:00
+Max. Underwater Duration       464 days 00:00:00
+Total Underwater Duration     2606 days 00:00:00
 ```
 
 ### Weekly Rebalancing
+![](result/img/weekly_rebalancing leverage.jpg)
 #### Monday
 ```plaintext
-Start                                2012-01-04 00:00:00
-End                                  2022-01-03 00:00:00
-Duration                              3652 days 00:00:00
-Return (Ann.) [%]                              13.075745
-Volatility (Ann.) [%]                          13.723035
-Information Ratio                               0.952832
-Final AUM [unitless]                            3.591334
-AUM Peak [$]                                    3.619247
-Final Return [%]                              243.198034
-Max. Drawdown [%]                             -21.354685
-Max. Drawdown Duration                 427 days 00:00:00
-Avg. Drawdown Duration       120 days 10:26:05.217391304
-Max. Underwater Duration               463 days 00:00:00
-Total Underwater Duration             2590 days 00:00:00
+Start                        2012-01-02 00:00:00
+End                          2022-01-03 00:00:00
+Duration                      3654 days 00:00:00
+Return (Ann.) [%]                      13.153161
+Volatility (Ann.) [%]                  12.443584
+Information Ratio                       1.057023
+Final AUM [unitless]                     3.63492
+AUM Peak [$]                            3.651888
+Final Return [%]                      263.492044
+Max. Drawdown [%]                     -21.578937
+Max. Drawdown Duration         488 days 00:00:00
+Avg. Drawdown Duration         143 days 21:20:00
+Max. Underwater Duration       464 days 00:00:00
+Total Underwater Duration     2603 days 00:00:00
 ```
 
 #### Tuesday
 ```plaintext
-Start                                2012-01-04 00:00:00
-End                                  2022-01-03 00:00:00
-Duration                              3652 days 00:00:00
-Return (Ann.) [%]                              13.058376
-Volatility (Ann.) [%]                          13.726604
-Information Ratio                               0.951319
-Final AUM [unitless]                            3.585599
-AUM Peak [$]                                    3.613467
-Final Return [%]                              242.670194
-Max. Drawdown [%]                             -21.419564
-Max. Drawdown Duration                 427 days 00:00:00
-Avg. Drawdown Duration       120 days 10:26:05.217391304
-Max. Underwater Duration               463 days 00:00:00
-Total Underwater Duration             2590 days 00:00:00
+Start                        2012-01-03 00:00:00
+End                          2022-01-03 00:00:00
+Duration                      3653 days 00:00:00
+Return (Ann.) [%]                      13.124885
+Volatility (Ann.) [%]                  12.454651
+Information Ratio                       1.053814
+Final AUM [unitless]                    3.623657
+AUM Peak [$]                            3.640601
+Final Return [%]                      262.365694
+Max. Drawdown [%]                      -21.85667
+Max. Drawdown Duration         488 days 00:00:00
+Avg. Drawdown Duration         143 days 21:20:00
+Max. Underwater Duration       464 days 00:00:00
+Total Underwater Duration     2603 days 00:00:00
 ```
 
 #### Wednesday
 ```plaintext
-Start                                2012-01-04 00:00:00
-End                                  2022-01-03 00:00:00
-Duration                              3652 days 00:00:00
-Return (Ann.) [%]                              13.078825
-Volatility (Ann.) [%]                          13.731218
-Information Ratio                               0.952488
-Final AUM [unitless]                            3.592352
-AUM Peak [$]                                    3.620272
-Final Return [%]                              243.270502
-Max. Drawdown [%]                             -21.470667
-Max. Drawdown Duration                 427 days 00:00:00
-Avg. Drawdown Duration       119 days 05:13:02.608695652
-Max. Underwater Duration               463 days 00:00:00
-Total Underwater Duration             2590 days 00:00:00
+Start                        2012-01-04 00:00:00
+End                          2022-01-03 00:00:00
+Duration                      3652 days 00:00:00
+Return (Ann.) [%]                      13.006569
+Volatility (Ann.) [%]                  12.452216
+Information Ratio                       1.044518
+Final AUM [unitless]                    3.582532
+AUM Peak [$]                            3.599283
+Final Return [%]                      258.253232
+Max. Drawdown [%]                     -21.732728
+Max. Drawdown Duration         488 days 00:00:00
+Avg. Drawdown Duration         143 days 21:20:00
+Max. Underwater Duration       464 days 00:00:00
+Total Underwater Duration     2599 days 00:00:00
 ```
 
 #### Thursday
 ```plaintext
-Start                        2015-12-07 00:00:00
+Start                        2012-01-05 00:00:00
 End                          2022-01-03 00:00:00
-Duration                      2219 days 00:00:00
-Return (Ann.) [%]                      14.815198
-Volatility (Ann.) [%]                  14.707376
-Information Ratio                       1.007331
-Final AUM [unitless]                     2.39572
-AUM Peak [$]                            2.414342
-Final Return [%]                      139.572009
-Max. Drawdown [%]                     -21.434539
-Max. Drawdown Duration         304 days 00:00:00
-Avg. Drawdown Duration         107 days 11:12:00
-Max. Underwater Duration       463 days 00:00:00
-Total Underwater Duration     1572 days 00:00:00
+Duration                      3651 days 00:00:00
+Return (Ann.) [%]                      13.047936
+Volatility (Ann.) [%]                  12.449193
+Information Ratio                       1.048095
+Final AUM [unitless]                    3.594478
+AUM Peak [$]                            3.611288
+Final Return [%]                      259.447796
+Max. Drawdown [%]                      -21.69315
+Max. Drawdown Duration         488 days 00:00:00
+Avg. Drawdown Duration         143 days 21:20:00
+Max. Underwater Duration       464 days 00:00:00
+Total Underwater Duration     2598 days 00:00:00
 ```
 
 #### Friday
 ```plaintext
-Start                                2012-01-04 00:00:00
-End                                  2022-01-03 00:00:00
-Duration                              3652 days 00:00:00
-Return (Ann.) [%]                              13.058376
-Volatility (Ann.) [%]                          13.726604
-Information Ratio                               0.951319
-Final AUM [unitless]                            3.585599
-AUM Peak [$]                                    3.613467
-Final Return [%]                              242.670194
-Max. Drawdown [%]                             -21.419564
-Max. Drawdown Duration                 427 days 00:00:00
-Avg. Drawdown Duration       120 days 10:26:05.217391304
-Max. Underwater Duration               463 days 00:00:00
-Total Underwater Duration             2590 days 00:00:00
+Start                        2011-12-30 00:00:00
+End                          2022-01-03 00:00:00
+Duration                      3657 days 00:00:00
+Return (Ann.) [%]                      13.199051
+Volatility (Ann.) [%]                  12.459574
+Information Ratio                        1.05935
+Final AUM [unitless]                    3.652157
+AUM Peak [$]                            3.669235
+Final Return [%]                      262.808968
+Max. Drawdown [%]                     -21.789322
+Max. Drawdown Duration         488 days 00:00:00
+Avg. Drawdown Duration         143 days 21:20:00
+Max. Underwater Duration       464 days 00:00:00
+Total Underwater Duration     2604 days 00:00:00
 ```
