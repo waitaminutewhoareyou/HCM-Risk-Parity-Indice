@@ -9,7 +9,7 @@ from RiskParityPrimer import RiskParitySP
 tqdm.pandas(desc="Rebalancing")
 
 data_folder = '../data/'
-start_date = '2011-12-25'
+start_date = '2018-12-25'
 end_date = '2023-1-3'
 lag = 2
 RESULT_DIR = './result/'
@@ -64,7 +64,7 @@ if __name__ == '__main__':
     ax_left.plot(replicated_ret_cumulative, label='ret', color='r')
     ax_right.scatter(trader.leverage.index, trader.leverage.values, label='leverage', color='b')
     fig.legend(loc='upper right', bbox_to_anchor=(1,1), bbox_transform=ax_left.transAxes)
-#    plt.savefig(RESULT_DIR + f'img/{Path(__file__).stem} leverage.jpg')
+    plt.savefig(RESULT_DIR + f'img/{Path(__file__).stem} leverage.jpg')
 
     plt.show()
 
