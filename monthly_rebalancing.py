@@ -9,7 +9,7 @@ from RiskParityPrimer import RiskParitySP
 tqdm.pandas(desc="Rebalancing")
 
 data_folder = '../data/'
-start_date = '2018-12-25'
+start_date = '2011-12-25'
 end_date = '2023-1-3'
 lag = 2
 RESULT_DIR = './result/'

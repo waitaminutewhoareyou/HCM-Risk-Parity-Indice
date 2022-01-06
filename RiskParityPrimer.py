@@ -2,14 +2,14 @@ import numpy as np
 import pandas as pd
 import datetime as dt
 
-
-
 data_folder = '../data/'
 data_dir = '../data/consolidated_table_wo_features_SP'
 asset_spec_dir = '../data/asset_spec.csv'
 RESULT_DIR = './result/'
 minN = 1260
 maxN = 3780
+asset_spec = pd.read_csv(asset_spec_dir, index_col='Asset number')
+asset_pool = asset_spec[asset_spec['Illiquid'] == 0].index
 
 
 def get_next_n_trading_days(date, n=1):
@@ -26,7 +26,7 @@ class RiskParitySP:
         # load data
         self.df = pd.read_pickle(data_dir)
 
-        self.asset_specs = pd.read_csv(asset_spec_dir, index_col='Asset number')
+        self.asset_specs = pd.read_csv(asset_spec_dir, index_col='Asset number').loc[asset_pool]
         self.indicator = self.asset_specs[['Comm indicator', 'Equity indicator', 'Bond indicator']]
 
         self.commodity_class = (self.asset_specs['Comm indicator'] == 1).index
@@ -110,7 +110,3 @@ class RiskParitySP:
         self.N = min(maxN, self.N + rebalancing_gap)
 
         return raw_w
-
-
-
-

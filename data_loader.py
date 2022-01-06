@@ -6,9 +6,15 @@ pd.set_option('display.max_columns', 5)
 pd.set_option('display.max_rows', 60)
 
 
+
+
 class Dataloader:
     def __init__(self):
         self.data_dir = '../data/Asset/'
+        self.asset_specs = pd.read_csv('../data/asset_spec.csv', index_col='Asset number')
+
+        self.asset_pool = self.asset_specs[self.asset_specs['Illiquid'] == 0].index
+        print(self.asset_pool)
 
     def create_xarray(self):
 
@@ -25,6 +31,8 @@ class Dataloader:
             if asset_ix > 137:
                 continue
 
+            if asset_ix not in self.asset_pool:
+                continue
             columns.append(asset_ix)
 
             cur_df = pd.read_csv(self.data_dir + csv_file,
@@ -48,7 +56,7 @@ class Dataloader:
 
             cur_df['adjusted fx'] = cur_df[['Fx', 'FxBase']].apply(lambda x: adjust_fx(*x), axis=1)
             cur_df['adjusted fx ret'] = cur_df['adjusted fx'].pct_change(fill_method='ffill')
-            cur_df['ret'] = cur_df['%change'] * (1 + cur_df['adjusted fx ret']) /100
+            cur_df['ret'] = cur_df['%change'] * (1 + cur_df['adjusted fx ret']) / 100
 
             if not len(time_index):
                 "Name	Cur	Year	Month	Day	%change	Vol	Px	Fx	FxBase"
