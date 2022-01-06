@@ -10,7 +10,7 @@ tqdm.pandas(desc="Rebalancing")
 
 data_folder = '../data/'
 start_date = '2018-12-25'
-end_date = '2021-1-3'
+end_date = '2023-1-3'
 lag = 2
 RESULT_DIR = './result/'
 TV = 0.1  # Target volatility

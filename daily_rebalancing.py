@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
     fig, ax_left = plt.subplots()
     ax_right = ax_left.twinx()
-    ax_left.plot(replicated_ret_cumulative, label='ret', color='r')
+    ax_left.plot(replicated_ret, label='ret', color='r')
     ax_right.scatter(trader.leverage.index, trader.leverage.values, label='leverage', color='b')
     fig.legend(loc='upper right', bbox_to_anchor=(1,1), bbox_transform=ax_left.transAxes)
     plt.savefig(RESULT_DIR + f'img/{Path(__file__).stem} leverage.jpg')
